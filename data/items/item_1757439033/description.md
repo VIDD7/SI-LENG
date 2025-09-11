@@ -1,0 +1,1 @@
+Port aman semua, lengkap dus box plus adaptor

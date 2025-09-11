@@ -1,8 +1,18 @@
 [
-  {
-    "id": "user-001",
-    "username": "david_guntoro",
-    "email": "vid@email.com",
-    "password_hash": "..."
-  }
+    {
+        "id": "user_1757463158",
+        "username": "vidd",
+        "email": "vid@sys.eu",
+        "phone": "6283175817064",
+        "password_hash": "$2y$12$aeLVJS4jLaiN5a1SCvzjsOxlHEErK3RP0OtoYxgVRu9tEt9uqc.SK",
+        "role": "admin"
+    },
+    {
+        "id": "user_1757550414",
+        "username": "pembeli",
+        "email": "vidd@pembeli.my.id",
+        "phone": "6283175817064",
+        "password_hash": "$2y$12$r1zHZB0NGBuZjqhc9VS9L.\/pIG\/XEcVzRsTNlFCB0kwqdbFmT5sc6",
+        "role": "user"
+    }
 ]
