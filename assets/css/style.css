@@ -433,6 +433,13 @@ input::placeholder, textarea::placeholder {
   transition: transform 0.2s ease-in-out;
   line-height: 0; 
 }
+.fab i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
 .fab:hover {
   transform: scale(1.1);
   text-decoration: none;
