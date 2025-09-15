@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-// Pastikan hanya user login yang bisa akses
+// Pastikan hanya user yg udah login yang bisa akses
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit();
 }
 
-// Pastikan diakses via POST
+// memaastikan diakses via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $itemId = $_POST['item_id'];
     $userId = $_SESSION['user_id'];

@@ -2,7 +2,7 @@
 session_start();
 
 //oke temen2 jadi ini file otak dari login.php
-//jadi file ini yang bakal ngecek username dan passwordnya bener apa nggak
+//jadi file ini yang bakal ngecek username dan passwordnya bener atau salah
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    // Ini untuk menentukan lokasi penyimpanan user yaitu users.json
+    // Ini untuk menentukan lokasi penyimpanan user yaitu di file users.json
     $file_path = 'data/users.json';
 
     // Baca data pengguna
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 } else {
-    // Jika file diakses langsung, tendang ke halaman utama
+    // Jika file diakses langsung, arahkan ke halaman utama
     header('Location: index.php');
     exit();
 }

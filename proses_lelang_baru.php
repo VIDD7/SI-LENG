@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// Pastikan proses ini diakses via metode POST dari form
+// Memastikan proses ini diakses via metode POST dari form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // TANGKAP & VALIDASI DATA TEKS
@@ -22,8 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // PROSES UPLOAD GAMBAR
-    // $_POST itu buat nampung data teks, angka, dll.
-    // $_FILES itu khusus buat nampung data file yang di-upload.
+    // variabel $_POST itu buat nampung data teks, angka, dll.
+    // variabel $_FILES itu khusus buat nampung data file yang di-upload.
     if (isset($_FILES['item_image']) && $_FILES['item_image']['error'] == 0) {
         $target_dir = "uploads/";
         

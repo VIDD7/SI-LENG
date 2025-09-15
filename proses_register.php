@@ -34,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Hash password untuk keamanan
-    // Ini sangat penting! Jangan pernah simpan password asli.
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
     // Langkah 7: Buat data pengguna baru dalam format array

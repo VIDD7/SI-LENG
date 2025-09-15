@@ -139,7 +139,10 @@ require 'includes/header.php';
             <h3>Harga Saat Ini:</h3>
             <p class="harga-utama">Rp <?php echo number_format($details['current_price'], 0, ',', '.'); ?></p>
 
-            <?php if ($seller && !empty($seller['phone'])): 
+            <?php 
+            $isOwner = isset($_SESSION['user_id']) && $_SESSION['user_id'] === $details['owner_id'];
+
+            if ($seller && !empty($seller['phone']) && !$isOwner): 
                 $pesan_wa = urlencode("Halo, saya tertarik dengan lelang \"" . $details['title'] . "\".");
                 $link_wa = "https://wa.me/" . $seller['phone'] . "?text=" . $pesan_wa;
             ?>
@@ -161,7 +164,7 @@ require 'includes/header.php';
                     <button type="submit" class="btn">Kirim Tawaran (BID)</button>
                 </form>
             <?php elseif ($isActive && $isOwner): ?>
-                <p class="info-status">Ini adalah lelang Anda. Anda tidak bisa menawar.</p>
+                <p class="info-status">Ini adalah barang lelang Anda, tidak bisa menawar.</p>
             <?php elseif ($isActive && $isHighestBidder): ?>
                 <p class="info-status">Anda adalah penawar tertinggi saat ini.</p>
             <?php elseif ($isActive && !$isLoggedIn): ?>
