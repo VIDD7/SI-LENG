@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// memaastikan diakses via POST
+// memastikan diakses via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $itemId = $_POST['item_id'];
     $userId = $_SESSION['user_id'];
@@ -25,16 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Cek apakah user ini adalah pemilik DAN belum ada tawaran
         // variabel role admin
         $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
-        $isAdminAction = isset($_POST['admin_action']);
 
         // Cek Kondisi Penghapusan
         $canDelete = false;
-        // Kondisi 1: Dihapus oleh pemilik, dan belum ada tawaran
+        // Kondisi 1: Dihapus oleh pemilik, dan belum ada tawaran atau bid
         if ($details['owner_id'] === $userId && empty($bids)) {
             $canDelete = true;
         }
         // Kondisi 2: Dihapus oleh admin, dan lelang sudah berakhir
-        if ($isAdmin && $isAdminAction && $details['status'] === 'ended') {
+        if ($isAdmin && $details['status'] === 'ended') {
             $canDelete = true;
         }
 

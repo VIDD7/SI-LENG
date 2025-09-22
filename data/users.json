@@ -14,5 +14,13 @@
         "phone": "6283175817064",
         "password_hash": "$2y$12$r1zHZB0NGBuZjqhc9VS9L.\/pIG\/XEcVzRsTNlFCB0kwqdbFmT5sc6",
         "role": "user"
+    },
+    {
+        "id": "user_1757898082",
+        "username": "iqbal",
+        "email": "iqval@icbal.neat",
+        "phone": "6283175817064",
+        "password_hash": "$2y$12$mkiBUKwLBqoQVvEUsphoM.MB\/5Z1F7qfZmzcnVoCc43bOoPh1.Wry",
+        "role": "user"
     }
 ]
