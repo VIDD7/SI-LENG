@@ -1,3 +1,19 @@
+// KODE UNTUK DROPDOWN MENU PROFIL
+document.addEventListener("DOMContentLoaded", function () {
+  const userMenuTrigger = document.querySelector(".user-menu-trigger");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+  if (userMenuTrigger && dropdownMenu) {
+    userMenuTrigger.addEventListener("click", function (event) {
+      dropdownMenu.classList.toggle("active");
+      event.stopPropagation();
+    });
+    window.addEventListener("click", function () {
+      if (dropdownMenu.classList.contains("active")) {
+        dropdownMenu.classList.remove("active");
+      }
+    });
+  }
+});
 // elemen jam dinding
 const countdownElement = document.getElementById("countdown");
 
@@ -40,19 +56,4 @@ if (countdownElement) {
       " detik ";
   }, 1000);
 }
-// --- KODE UNTUK DROPDOWN MENU AKUN ---
-document.addEventListener("DOMContentLoaded", function () {
-  const userMenuTrigger = document.querySelector(".user-menu-trigger");
-  const dropdownMenu = document.querySelector(".dropdown-menu");
-  if (userMenuTrigger && dropdownMenu) {
-    userMenuTrigger.addEventListener("click", function (event) {
-      dropdownMenu.classList.toggle("active");
-      event.stopPropagation();
-    });
-    window.addEventListener("click", function () {
-      if (dropdownMenu.classList.contains("active")) {
-        dropdownMenu.classList.remove("active");
-      }
-    });
-  }
-});
+

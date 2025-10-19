@@ -1,4 +1,4 @@
-/* Definisi palet warna */
+/* Definisi palet warna  */
 :root {
   --biru-tua: #2c3e50;
   --oranye-emas: #f39c12;
@@ -22,7 +22,7 @@
 body {
   color: var(--putih); 
   line-height: 1.6;
-  background: url('bg.png') no-repeat center center fixed;
+  background: url('../img/bg.png') no-repeat center center fixed;
   background-size: cover; 
 }
 
@@ -30,8 +30,20 @@ a {
   color: var(--biru-cerah);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: none;
+}
+
+.back-link {
+  padding: 7px;
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius: 10px;
+  backdrop-filter: 10px;
+  color: #fff;
+  font-weight: bold;
+  width: 80px;
+  text-align: center;
 }
 
 /* layout utama */
@@ -40,10 +52,8 @@ a:hover {
   margin: 20px auto; /* Memberi jarak atas/bawah dan membuat container di tengah */
   padding: 30px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, .2);
   backdrop-filter: blur(20px);
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
 }
 
 /* Style untuk halaman login dan register */
@@ -130,7 +140,7 @@ a:hover {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
 }
 .user-menu {
   position: relative;
@@ -297,9 +307,16 @@ input::placeholder, textarea::placeholder {
   border-radius: 5px;
   margin-bottom: 20px;
   color: var(--putih);
+  font-weight: bold;
 }
-.pesan-sukses { background-color: rgba(40, 167, 69, 0.7); border: 1px solid var(--hijau-harga); }
-.pesan-error { background-color: rgba(220, 53, 69, 0.7); border: 1px solid var(--merah-hapus); }
+.pesan-sukses {
+  background-color: rgba(40, 167, 69, 0.7);
+  border: 1px solid var(--hijau-harga);
+}
+.pesan-error {
+  background-color: var(--merah-hapus);
+  border: 1px solid var(--border-color);
+}
 
 /* halaman detail barang */
 .item-page-container .back-link {
@@ -503,15 +520,9 @@ hr {
   text-align: center;
 }
 
-.back-link {
-  padding: 7px;
-  border: 2px solid rgba(255,255,255,.2);
-  border-radius: 10px;
-  backdrop-filter: 10px;
-  color: #fff;
-  font-weight: bold;
-  width: 80px;
-  text-align: center;
+.back-link:hover {
+  background-color: var(--oranye-emas);
+  color: var(--putih);
 }
 
 .profile-header h1 {
