@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// 'penerjemah' Markdown
+// penerjemah Markdown
 require 'Parsedown.php';
 
 // TANGKAP DAN VALIDASI ID BARANG
@@ -94,7 +94,7 @@ require 'includes/header.php';
 ?>
 
 <main class="item-page-container">
-    <a href="index.php" class="back-link">&larr; Kembali ke Daftar Lelang</a>
+    <a href="index.php" class="back-link">Home</a>
 
     <div class="item-grid">
         <div class="item-gallery">

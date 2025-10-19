@@ -13,7 +13,7 @@ require 'includes/header.php';
 
 <main>
     <div class="form-page-header">
-        <a href="index.php" class="back-link">&larr; Kembali ke Beranda</a>
+        <a href="index.php" class="back-link">Home</a>
         <h1>Mulai Lelang Barang Baru</h1>
         <p>Isi detail barang yang akan Anda lelang di bawah ini.</p>
     </div>

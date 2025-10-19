@@ -1,0 +1,12 @@
+{
+    "id": "item_1758689433",
+    "owner_id": "user_1757550414",
+    "title": "komputer",
+    "open_price": 2000000,
+    "current_price": 2100000,
+    "highest_bidder_id": "user_1757898082",
+    "image_path": "uploads\/68d37899e615f-1758689433.jpg",
+    "created_at": "2025-09-24T04:50:33+00:00",
+    "end_at": "2025-10-12T12:00:00+00:00",
+    "status": "ended"
+}

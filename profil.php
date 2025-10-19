@@ -2,7 +2,6 @@
 
 require 'includes/header.php'; 
 
-// 'PENJAGA' HALAMAN
 // Jika pengguna belum login, arahkan ke halaman login
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
@@ -29,8 +28,8 @@ if (!$currentUser) {
     die("Error: Gagal memuat data pengguna.");
 }
 // KUMPULKAN RIWAYAT LELANG PENGGUNA 
-$myAuctions = []; // Array untuk menampung lelang yang dia buat
-$myWinnings = []; // Array untuk menampung lelang yang dia menangkan
+$myAuctions = []; // Array untuk menampung lelang yang di buat
+$myWinnings = []; // Array untuk menampung lelang yang di menangkan
 
 $itemsDir = 'data/items/';
 if (is_dir($itemsDir)) {
@@ -59,7 +58,7 @@ if (is_dir($itemsDir)) {
 
 <main>
     <div class="profile-header">
-        <a href="index.php" class="back-link">&larr; Kembali ke Daftar Lelang</a>
+        <a href="index.php" class="back-link">Home</a>
         <h1>Profil Saya</h1>
         <p>Ini adalah informasi akun Anda yang terdaftar di sistem.</p>
     </div>
