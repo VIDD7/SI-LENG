@@ -39,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($canDelete) {
             // --- PROSES PENGHAPUSAN ---
-
             // 1. Hapus file gambar di folder uploads/
             if (file_exists($details['image_path'])) {
                 unlink($details['image_path']);

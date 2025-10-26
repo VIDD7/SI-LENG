@@ -7,13 +7,14 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $spek = trim($_POST['spek']);
   $title = trim($_POST['title']);
   $description = trim($_POST['description']);
   $open_price = trim($_POST['open_price']); 
   $end_at = $_POST['end_at'];
   $owner_id = $_SESSION['user_id'];
 
-  if (empty($title) || empty($description) || empty($end_at)) {
+  if (empty($title) || empty($description) || empty($end_at) || empty($spek)) {
     die("Err, Semua kolom harus diisi yaa!.");
   }
   //proses upload gambar
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //ambil ekstensi file asli dan ubah namanya jadi huruf kecil
     $imageFileType = strtolower(pathinfo($_FILES['item_image']['name'], PATHINFO_EXTENSION));
     //buat nama file unik gabungan antara waktu sama nama ekstensi file
-    $unique_filename = uniqid() . '-' . time() . '-' . $imageFileType;
+    $unique_filename = uniqid() . '-' . time() . '.' . $imageFileType;
     $target_file = $target_dir . $unique_filename;
 
     //Pindahkan file dari lokasi sementara yg di simpen sama php ke lokasi folder permanen (folder uploads/)
@@ -45,6 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!mkdir($itemDir, 0777, true)) {
     die('Gagal membuat direktori untuk item baru.');
   }
+  //buat file spek
+  file_put_contents($itemDir . '/spek.md', $spek);
   //buat file deskripsi
   file_put_contents($itemDir . '/description.md', $description);
   //siapin data apa aja untuk detail.json

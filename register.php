@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="wrapper" >
+  <div class="wrapper">
     <h1>Register</h1>
     <form action="proses_register.php" method="POST" >
       <div class="form-group" >
-        <input type="text" placeholder="username" id="username" name="username" required >
+        <input type="text" placeholder="username" id="username" name="username" required>
       </div>
       <div class="form-group" >
-        <input type="password" placeholder="password" id="password" name="password" required >
+        <input type="password" placeholder="password" id="password" name="password" required>
       </div>
       <div class="form-group" >
         <input type="email" placeholder="email" id="email" name="email" required >

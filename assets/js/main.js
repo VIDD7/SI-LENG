@@ -1,6 +1,9 @@
-// KODE UNTUK DROPDOWN MENU PROFIL
+// kode untuk dropdownenu
+// nunggu semua element dimuatkan sebelum js di jalankan
 document.addEventListener("DOMContentLoaded", function () {
+  //ni untuk nyari tombol mana yg mau di trigger
   const userMenuTrigger = document.querySelector(".user-menu-trigger");
+  //cari menu dropdown 
   const dropdownMenu = document.querySelector(".dropdown-menu");
   if (userMenuTrigger && dropdownMenu) {
     userMenuTrigger.addEventListener("click", function (event) {

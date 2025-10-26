@@ -19,7 +19,12 @@ require 'includes/header.php';
     </div>
 
     <form action="proses_lelang_baru.php" method="POST" enctype="multipart/form-data" class="new-auction-form">
-        <div class="form-column">
+            <div class="form-column">
+            <div class="form-group">
+                <label for="spek">Spesifikasi</label>
+                <input type="text" id="spek" name="spek" required placeholder="Spesifikasi barang">
+            </div>
+
             <div class="form-group">
                 <label for="title">Judul Barang:</label>
                 <input type="text" id="title" name="title" required placeholder="Contoh: Vespa Sprint 150">

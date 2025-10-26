@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    //TANGKAP & VALIDASI DATA
+    // TANGKAP & VALIDASI DATA
     $itemId = $_POST['item_id'];
     $bidAmount = (int)$_POST['bid_amount'];
     $bidderId = $_SESSION['user_id'];
@@ -34,12 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Error: Gagal membuka file data.");
     }
 
-    // Ini'jurus kunci'. LOCK_EX itu Exclusive Lock.
-    // Selama kita memegang kunci ini, tidak ada skrip lain yang bisa menyentuh file ini.
     // Mereka akan antrii menunggu giliran.
     if (flock($detailHandle, LOCK_EX)) {
-        
-        // ZONA KRITIS (HANYA SATU PROSES BISA MASUK KE SINI DALAM SATU WAKTU)
         
         $detailsJson = stream_get_contents($detailHandle);
         $details = json_decode($detailsJson, true);
@@ -73,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // tidak melakukan apa-apa, cukup lepaskan kunci dan redirect.
         }
 
-        //melepas kunci!
+        // melepas kunci
         flock($detailHandle, LOCK_UN);
 
     } else {

@@ -53,10 +53,12 @@ $detailsJson = file_get_contents($itemDir . '/detail.json');
 $details = json_decode($detailsJson, true);
 
 $descriptionMd = file_get_contents($itemDir . '/description.md');
+$spek = file_get_contents($itemDir . '/spek.md');
 
 // Ubah deskripsi dari Markdown ke HTML
 $parsedown = new Parsedown();
 $descriptionHtml = $parsedown->text($descriptionMd);
+$spekhtml = $parsedown->text($spek);
 
 //AMBIL DATA UNTUK RIWAYAT PENAWARAN
 
@@ -105,12 +107,14 @@ require 'includes/header.php';
 
         <div class="item-description-panel">
             <h1><?php echo htmlspecialchars($details['title']); ?></h1>
-            
             <h3>Deskripsi Barang</h3>
             <div class="description-content">
                 <?php echo $descriptionHtml; ?>
             </div>
-            
+            <h3>Spesifikasi</h3
+            <div class="description-content">
+                <?php echo $spekhtml; ?>
+            </div>
             <div class="bid-history">
                 <h3>Riwayat Penawaran</h3>
                 <?php if (empty($bids)): ?>

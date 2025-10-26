@@ -48,7 +48,7 @@ a:hover {
 
 /* layout utama */
 .container {
-  max-width: 1200px; /* Batas lebar konten agar tidak terlalu lebar di layar besar */
+  max-width: 1200px; 
   margin: 20px auto; /* Memberi jarak atas/bawah dan membuat container di tengah */
   padding: 30px;
   background: transparent;
@@ -111,12 +111,12 @@ a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
   cursor: pointer;
   font-size: 16px;
-  color: var(--biru-tua);
+  color: var(--putih);
   font-weight: bold;
 }
 .wrapper .btnl:hover {
   background-color: var(--putih);
-  color: var(--biru-tua);
+  color: var(--oranye-emas);
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -128,7 +128,7 @@ a:hover {
   align-items: center; 
   margin-bottom: 20px;
   padding: 15px 25px;
-  background-color: rgba(44, 62, 80, 0.5); /* Biru tua semi-transparan */
+  background-color: rgba(44, 62, 80, 0.5);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -171,7 +171,9 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
 }
-.dropdown-menu.active { display: block; }
+.dropdown-menu.active {
+  display: block;
+}
 .dropdown-menu a {
   color: var(--putih);
   padding: 12px 16px;
@@ -188,23 +190,24 @@ a:hover {
 }
 .nav-lgn {
   background-color: var(--oranye-emas);
-  color: var(--biru-tua);
+  color: var(--putih);
   font-weight: bold;
 }
 .nav-lgn:hover {
   background-color: var(--putih);
+  color: var(--oranye-emas);
   text-decoration: none;
   font-weight: bold;
 }
 .nav-reg {
   background-color: var(--oranye-emas);
-  color: var(--biru-tua);
+  color: var(--putih);
   font-weight: bold;
 }
 .nav-reg:hover {
   font-weight: bold;
   background-color: var(--putih);
-  color: black;
+  color: var(--oranye-emas);
   text-decoration: none;
 }
 
@@ -301,7 +304,6 @@ input::placeholder, textarea::placeholder {
   color: black;
   background: #c82333;
 }
-
 .pesan-sukses, .pesan-error {
   padding: 15px;
   border-radius: 5px;
@@ -326,35 +328,30 @@ input::placeholder, textarea::placeholder {
     font-weight: bold;
     color: var(--putih);
 }
-
 .back-link:hover {
   background-color: #fff;
   color: black;
 }
-
 .item-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Kolom kiri sedikit lebih besar */
+    grid-template-columns: 1.2fr 1fr;
     grid-template-rows: auto auto;
     gap: 30px;
     grid-template-areas: 
         "gallery description"
         "gallery action";
 }
-
 .item-gallery {
     grid-area: gallery;
 }
-
 .item-gallery img {
     width: 100%;
     height: 100%;
-    max-height: 500px; /* Batasi tinggi maksimum gambar */
+    max-height: 500px;
     object-fit: cover;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 .item-description-panel {
     grid-area: description;
 }
@@ -368,11 +365,10 @@ input::placeholder, textarea::placeholder {
     color: #eee;
     margin-bottom: 20px;
 }
-
 .bid-history ul {
     list-style: none;
     padding-left: 0;
-    max-height: 150px; /* Batasi tinggi agar bisa di-scroll jika banyak */
+    max-height: 150px; /* Batas tinggi biar bisa di-scroll jika banyak historinya */
     overflow-y: auto;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -387,15 +383,13 @@ input::placeholder, textarea::placeholder {
     color: var(--oranye-emas);
     font-weight: bold;
 }
-
-
 .item-action-panel {
     grid-area: action;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 25px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    align-self: start; /* Membuat panel ini 'menempel' di atas di dalam grid area-nya */
+    align-self: start;
 }
 .item-action-panel .harga-utama {
     font-size: 32px;
@@ -467,7 +461,6 @@ input::placeholder, textarea::placeholder {
 }
 
 /*SEARCH CONTAINER*/
-
 .search-container {
   margin-bottom: 40px;
 }
@@ -509,7 +502,6 @@ hr {
   text-align: left;
   margin-bottom: 20px;
 }
-
 .profile-header .back-link {
   padding: 10px;
   margin-bottom: 20px;
@@ -614,23 +606,19 @@ hr {
   border: 2px solid rgba(255,255,255,.2);
   text-align: center;
 }
-
 .back-link:hover{
   background-color: var(--oranye-emas);
   color: #fff;
 }
-
 .new-auction-form {
   display: grid;
   grid-template-columns: 2fr 1fr; /* Kolom kiri 2x lebih besar dari kanan */
   gap: 30px;
 }
-
 .form-column .btn {
   width: 100%;
   margin-top: 10px;
 }
-
 /* Penyesuaian untuk Mobile di Halaman Form */
 @media (max-width: 992px) {
   .new-auction-form {

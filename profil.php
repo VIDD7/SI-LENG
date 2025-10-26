@@ -8,8 +8,8 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-//CARI DATA PENGGUNA YANG SEDANG LOGIN 
-$currentUser = null; // variabel kosong untuk menampung data user
+// CARI DATA PENGGUNA YANG SEDANG LOGIN 
+$currentUser = null; // variabel kosong untuk nampung data user
 $userId = $_SESSION['user_id'];
 
 $usersJson = file_get_contents('data/users.json');
@@ -80,7 +80,7 @@ if (is_dir($itemsDir)) {
                     <td>: <?php echo htmlspecialchars($currentUser['phone']); ?></td>
                 </tr>
                 <tr>
-                    <td>Peran</td>
+                    <td>Role</td>
                     <td>: <?php echo ucfirst(htmlspecialchars($currentUser['role'])); ?></td>
                 </tr>
             </table>
